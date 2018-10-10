@@ -1,4 +1,4 @@
-FROM python:3.6.6
+FROM tensorflow/tensorflow:1.11.0-gpu-py3
 
 WORKDIR /root/
 
@@ -8,6 +8,6 @@ RUN apt-get update --fix-missing && \
     pip install pandas-td td-client && \
     pip install pystan && \
     pip install fbprophet && \
-    pip install tensorflow tensorflow-hub
+    pip install tensorflow-hub
 
 CMD ["python"]
